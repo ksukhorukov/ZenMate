@@ -1,20 +1,20 @@
+# frozen_string_literal: true
 
-require 'byebug'
 require_relative './slot'
-
+# Validates and prepares an input
 class InputProcessor
   attr_reader :slots, :data, :overall
 
   def initialize(file_name)
     begin
       @data = IO.readlines(file_name)
-    rescue Exception => e 
+    rescue StandardError => e
       error(e.message)
     end
 
     @slots = []
     @overall = 0
- 
+
     process_input
     check_overall_duration
   end
@@ -43,6 +43,6 @@ class InputProcessor
   end
 
   def check_overall_duration
-    error("No way to build schedule. Out of time.") if overall > 7 * 60 * 2
+    error('No way to build schedule. Out of time.') if overall > 7 * 60 * 2
   end
 end
