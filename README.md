@@ -14,6 +14,7 @@ The input contains one meeting per line; the meeting title can contain any chara
 
 ## Test input
 
+```
 All Hands meeting 60min
 Marketing presentation 30min
 Product team sync 30min
@@ -32,9 +33,11 @@ Back-end coding interview B 60min
 Back-end coding interview C 60min
 Sprint planning 45min
 New marketing campaign presentation 30min
+```
 
 ## Test output
 
+```
 Room 1:
 09:00AM All Hands meeting 60min
 10:00AM API Architecture planning 45min
@@ -57,6 +60,7 @@ Room 2:
 02:30PM Marketing presentation 30min
 03:00PM Developer talk 60min
 04:00PM Back-end coding interview C 60min
+```
 
 ## Requirements
 
