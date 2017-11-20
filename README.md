@@ -68,8 +68,8 @@ Ruby 2.4.2
 
 ## Install
 
-`gem install bundler`
-`bundle`
+```$ gem install bundler
+$ bundle```
 
 ## Test
 
