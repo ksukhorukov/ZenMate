@@ -1,6 +1,5 @@
 require_relative './spec_helper'
 require_relative '../lib/input_processor'
-require 'byebug'
 
 describe 'InputProcessor' do 
 
@@ -19,7 +18,7 @@ describe 'InputProcessor' do
     input.errors.should include(/Out of time/)
   end
 
-  it 'successfully parses data and builds schedule when everything is fine' do 
+  it 'successfully parses data and prepares input when everything is fine' do 
     input = InputProcessor.new('./spec/data/correct_data.txt')
     input.errors?.should be false
     input.slots.count.should be 1
