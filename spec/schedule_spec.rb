@@ -9,6 +9,12 @@ describe 'Schedule' do
     schedule.first_room.slots.should == input.slots
   end
 
+  it 'builds schedule with correct timelines' do 
+    input = InputProcessor.new('./spec/data/simple_event.txt')
+    schedule = Schedule.new(input.slots)
+    schedule.first_room.slots.first.time.should == '09:00AM'
+  end
+
   it 'can build schedule with a lunch break' do 
     input = InputProcessor.new('./spec/data/events_with_lunch.txt')
     schedule = Schedule.new(input.slots)
