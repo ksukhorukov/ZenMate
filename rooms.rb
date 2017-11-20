@@ -10,6 +10,9 @@ require './lib/usage'
 usage if ARGV.count != 1
 
 input = InputProcessor.new(ARGV[0])
+
+input.print_errors if input.errors?
+
 schedule = Schedule.new(input.slots)
 
 schedule.print
