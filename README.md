@@ -66,6 +66,15 @@ Room 2:
 
 Ruby 2.4.2
 
+## Install
+
+`gem install bundler`
+`bundle`
+
+## Test
+
+`$ rspec`
+
 ## Run
 
 `$./rooms.rb input.txt`
